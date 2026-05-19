@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.movieexplorer.databinding.FragmentMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import jakarta.inject.Singleton
+
 
 @AndroidEntryPoint
 class MainFragment: Fragment() {
