@@ -1,11 +1,11 @@
 package com.example.movieexplorer.data.remote
 
-data class FilmsResponse(
+data class MovieResponse(
     val page: Int,
-    val results: List<FilmsDto>
+    val results: List<MovieDto>
 )
 
-data class FilmsDto(
+data class MovieDto(
     val adult: Boolean,
     val backdropPath: String,
     val genreIds: List<Int>,

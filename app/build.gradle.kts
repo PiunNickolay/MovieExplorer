@@ -1,9 +1,8 @@
-import java.util.Properties
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.secrets)
 }
 
 android {
@@ -22,14 +21,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        val properties = Properties()
-        val localProperties = rootProject.file("local.properties")
-        if (localProperties.exists()) {
-            localProperties.inputStream().use { properties.load(it) }
-        }
-        val tmbd: String = properties.getProperty("tmdb.api.key", "")
-        buildConfigField(type = "String", name = "TMDB_API_KEY", value = "\"$tmbd\"")
     }
 
     buildTypes {
@@ -74,4 +65,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+}
+
+secrets {
+    propertiesFileName = "local.properties"
+    defaultPropertiesFileName = "local.defaults.properties"
+    ignoreList.add("key.*")
 }
