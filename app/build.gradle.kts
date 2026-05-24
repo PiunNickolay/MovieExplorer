@@ -43,6 +43,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.glide)
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.hilt)
     implementation(libs.retrofit)

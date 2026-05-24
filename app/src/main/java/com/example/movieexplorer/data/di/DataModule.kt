@@ -27,7 +27,7 @@ object DataModule {
             .add(KotlinJsonAdapterFactory())
             .build()
         val logging = HttpLoggingInterceptor().apply {
-            if (BuildConfig.DEBUG) {
+            level = if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor.Level.BODY
             } else {
                 HttpLoggingInterceptor.Level.NONE

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standart_dp">8dp</dimen>
+    <dimen name="classic_dimension">16dp</dimen>
+    <dimen name="photo_dimension">48dp</dimen>
+    <dimen name="zero_dimension">0dp</dimen>
+    <dimen name="rating_dimension">28dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+</resources>
